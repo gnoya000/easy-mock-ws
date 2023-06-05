@@ -37,8 +37,7 @@ function serveResponse(responseFilePath, selected, res, timeout){
 
 		// Send responseFile back to the client
 		function sendFileContent(err, data) {
-			res.setHeader('Content-Type', 'application/xml');
-
+			res.setHeader('Content-Type', 'application/soap+xml');
 			if(timeout){
 				console.log('SendData With timeout', timeout);
 				setTimeout(function(){
